@@ -2,6 +2,7 @@
 // Simple class to simulate timer functionality
 // By Serge Skorodinsky, 2017
 //
+// 5-23-2020 Modified RefreshIt() to avoid overfloating once in 49.5 days.
 
 #include "SSVTimer.h"
 #include <Arduino.h> 
@@ -66,12 +67,13 @@ void SSVTimer::SetOnTimer(timer_callback Value)
 
 void SSVTimer::RefreshIt()
 {
-unsigned long NowIs, EstimTime;
+unsigned long NowIs; //, EstimTime;
 if ( (_enabled) && (_ontimer != NULL) )
   {
   NowIs = millis();	
-  EstimTime = _laststart + _interval;
-  if (NowIs >= EstimTime)
+  //EstimTime = _laststart + _interval;
+  //if (NowIs >= EstimTime)
+  if (NowIs - _laststart >= _interval)  //5-23-2020 to avoid overfloating once in 49.5 days.
     {
 	_laststart = NowIs; 
     _counter++;	
