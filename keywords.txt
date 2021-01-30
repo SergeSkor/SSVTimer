@@ -1,0 +1,24 @@
+#######################################
+# Syntax Coloring Map For SSVTimer
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+SSVTimer	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+SetInterval	KEYWORD2
+GetInterval	KEYWORD2
+SetEnabled	KEYWORD2
+GetEnabled	KEYWORD2
+SetOnTimer	KEYWORD2
+RefreshIt	KEYWORD2
+GetCounter	KEYWORD2
+SetRepeatCount	KEYWORD2
+GetRepeatCount	KEYWORD2
+ResetCounter	KEYWORD2
