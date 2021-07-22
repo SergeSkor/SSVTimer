@@ -1,4 +1,3 @@
-# SSVTimer
-One more non-blocking Timer class.
-
-5/23/2020 - fix bug with overfloating every 49.5 days.
+# SSVXYMatrixText
+sentence=Class to show text (English, Russian) on XY LED Matrix, based on FastLED.
+paragraph=Supports different orientations. Tested on WS2812 Full Color LED 16x16 matrix.
